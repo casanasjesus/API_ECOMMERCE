@@ -1,0 +1,15 @@
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\bin\Debug\net8.0\Lab.Domain.deps.json
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\bin\Debug\net8.0\Lab.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\bin\Debug\net8.0\Lab.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\bin\Debug\net8.0\Lab.Core.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\bin\Debug\net8.0\Lab.Core.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.csproj.AssemblyReference.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.AssemblyInfo.cs
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.csproj.Up2Date
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\refint\Lab.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\Lab.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Domain\obj\Debug\net8.0\ref\Lab.Domain.dll

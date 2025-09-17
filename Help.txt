@@ -1,0 +1,14 @@
+
+IMPORTANTE:
+1.- Cuando el DbContext se mueve a un proyecto diferente al de la aplicación principal, 
+	es necesario especificar el proyecto en donde se encuentran las librerias de EF y el archivo DbContext 
+	al ejecutar los comandos de Entity Framework Core en la consola del Administrador de Paquetes.
+	Esto asegura que las migraciones y otros comandos se ejecuten en el contexto correcto.
+
+	Add-Migration InitialMigration -OutputDir "Data/Migrations" -Project "Lab.Infra"
+
+2.- Muchas veces al mover las migraciones, estas no se encuentran en el proyecto correcto.
+	Para solucionar este problema, es necesario eliminar las migraciones existentes y crear nuevas migraciones 
+	en el proyecto correcto.
+
+	Add-Migration InitialMigration -OutputDir "Data/Migrations" -Project "Lab.Infra"

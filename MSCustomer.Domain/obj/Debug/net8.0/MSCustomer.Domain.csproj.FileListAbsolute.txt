@@ -1,0 +1,11 @@
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\bin\Debug\net8.0\MSCustomer.Domain.deps.json
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\bin\Debug\net8.0\MSCustomer.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\bin\Debug\net8.0\MSCustomer.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.AssemblyInfo.cs
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\refint\MSCustomer.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\MSCustomer.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSCustomer.Domain\obj\Debug\net8.0\ref\MSCustomer.Domain.dll

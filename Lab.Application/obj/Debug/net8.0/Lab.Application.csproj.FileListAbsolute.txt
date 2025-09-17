@@ -1,0 +1,17 @@
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Application.deps.json
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Application.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Core.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Core.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\bin\Debug\net8.0\Lab.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.csproj.AssemblyReference.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.AssemblyInfo.cs
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Appl.F453EAC5.Up2Date
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\refint\Lab.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\Lab.Application.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\Lab.Application\obj\Debug\net8.0\ref\Lab.Application.dll

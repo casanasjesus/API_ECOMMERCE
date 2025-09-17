@@ -1,0 +1,15 @@
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\bin\Debug\net8.0\MSOrder.Application.deps.json
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\bin\Debug\net8.0\MSOrder.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\bin\Debug\net8.0\MSOrder.Application.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\bin\Debug\net8.0\MSOrder.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\bin\Debug\net8.0\MSOrder.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.csproj.AssemblyReference.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.AssemblyInfo.cs
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder..5D3956F3.Up2Date
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\refint\MSOrder.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\MSOrder.Application.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Application\obj\Debug\net8.0\ref\MSOrder.Application.dll

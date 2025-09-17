@@ -1,0 +1,17 @@
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Infrastructure.deps.json
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Infrastructure.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Infrastructure.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Application.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Domain.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Application.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Domain.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.AssemblyInfo.cs
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder..3A98FE70.Up2Date
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\refint\MSOrder.Infrastructure.dll
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.pdb
+C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\ref\MSOrder.Infrastructure.dll

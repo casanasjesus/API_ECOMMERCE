@@ -1,0 +1,332 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.API\\MSCustomer.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.API\\MSCustomer.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.API\\MSCustomer.API.csproj",
+        "projectName": "MSCustomer.API",
+        "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.API\\MSCustomer.API.csproj",
+        "packagesPath": "C:\\Users\\Jesús Casañas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jesús Casañas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj": {
+                "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj"
+              },
+              "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\MSCustomer.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\MSCustomer.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj",
+        "projectName": "MSCustomer.Application",
+        "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj",
+        "packagesPath": "C:\\Users\\Jesús Casañas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jesús Casañas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\MSCustomer.Domain.csproj": {
+                "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\MSCustomer.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\MSCustomer.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\MSCustomer.Domain.csproj",
+        "projectName": "MSCustomer.Domain",
+        "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\MSCustomer.Domain.csproj",
+        "packagesPath": "C:\\Users\\Jesús Casañas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jesús Casañas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\MSCustomer.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\MSCustomer.Infrastructure.csproj",
+        "projectName": "MSCustomer.Infrastructure",
+        "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\MSCustomer.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Jesús Casañas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Infraestructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jesús Casañas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj": {
+                "projectPath": "C:\\Users\\Jesús Casañas\\OneDrive\\Desktop\\Jesus_Enrique\\ISTEA\\materias\\laboratorio_aplicaciones_web_servidor\\Lab.Solution202502_1\\MSCustomer.Application\\MSCustomer.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
