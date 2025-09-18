@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MSProduct.API.Dtos;
 using MSProduct.Application.Dtos;
@@ -43,12 +42,11 @@ namespace MSProduct.API.Controllers
                 return BadRequest("Invalid product ID.");
             }
 
-            // Get product by id using _productService
             var result = await _productService.GetProductByIdAsync(id);
 
             if (!result.IsSuccess)
             {
-                return NotFound();
+                throw new KeyNotFoundException($"Product with id {id} not found on database.");
             }
 
             return Ok(result.Value);
@@ -62,7 +60,6 @@ namespace MSProduct.API.Controllers
                 return BadRequest("Request body is null.");
             }
 
-            // Create product using _productService
             var productDto = _mapper.Map<CreateProductDto>(request);
 
             var result = _productService.CreateProduct(productDto);
@@ -102,7 +99,17 @@ namespace MSProduct.API.Controllers
         [HttpDelete("delete-product/{id}")]
         public IActionResult DeleteProduct(int id)
         {
-            // Placeholder for actual implementation
+            var result = _productService.DeleteProduct(id);
+
+            if (!result.IsSuccess)
+            {
+                if (result.Error.Contains("not found", StringComparison.OrdinalIgnoreCase))
+                {
+                    return NotFound(result.Error);
+                }
+                return BadRequest(result.Error);
+            }
+
             return NoContent();
         }
     }

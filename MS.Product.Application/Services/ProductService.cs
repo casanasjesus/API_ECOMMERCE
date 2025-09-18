@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MSProduct.Application.Dtos;
+﻿using MSProduct.Application.Dtos;
 using MSProduct.Application.Repositories;
 using MSProduct.Application.Validators;
 using MSProduct.Domain;
@@ -23,81 +18,126 @@ namespace MSProduct.Application.Services
 
         public async Task<Result<IEnumerable<Product>>> GetAllProductsAsync()
         {
-            var products = await _repository.GetAllAsync();
-
-            if (products == null)
+            try
             {
-                return Result.Fail<IEnumerable<Product>>("Products not found");
-            }
+                var products = await _repository.GetAllAsync();
 
-            return Result.Success(products);
+                if (products == null)
+                {
+                    return Result.Fail<IEnumerable<Product>>("Products not found");
+                }
+
+                return Result.Success(products);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<IEnumerable<Product>>($"An error occurred while retrieving products: {ex.Message}");
+            }
         }
 
         public async Task<Result<Product>> GetProductByIdAsync(int id)
         {
-            var product = await _repository.GetByIdAsync(id);
-
-            if (product == null)
+            try
             {
-                return Result.Fail<Product>("Product not found");
-            }
+                var product = await _repository.GetByIdAsync(id);
 
-            return Result.Success(product);
+                if (product == null)
+                {
+                    return Result.Fail<Product>($"Product with id {id} not found on database.");
+                }
+
+                return Result.Success(product);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
+            }
         }
 
         public Result<Product> CreateProduct(CreateProductDto request)
         {
-            var product = new Product
+            try
             {
-                Name = request.Name,
-                Description = request.Description,
-                Price = request.Price,
-                Stock = request.Stock
-            };
+                var product = new Product
+                {
+                    Name = request.Name,
+                    Description = request.Description,
+                    Price = request.Price,
+                    Stock = request.Stock
+                };
 
-            var validationResult = _validator.Validate(product);
+                var validationResult = _validator.Validate(product);
 
-            if (!validationResult.IsValid)
-            {
-                var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
-                return Result.Fail<Product>(errors);
+                if (!validationResult.IsValid)
+                {
+                    var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
+                    return Result.Fail<Product>(errors);
+                }
+
+                var id = _repository.Add(product);
+                product.Id = id;
+
+                return Result.Success(product);
             }
-
-            var id = _repository.Add(product);
-            product.Id = id;
-
-            return Result.Success(product);
+            catch (Exception ex)
+            {
+                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
+            }
         }
 
         public Result<Product> UpdateProduct(int id, UpdateProductDto request)
         {
-            var existingProduct = _repository.GetByIdAsync(id).Result;
-
-            if (existingProduct == null)
+            try
             {
-                return Result.Fail<Product>($"Product with id {id} not found on database.");
+                var existingProduct = _repository.GetByIdAsync(id).Result;
+
+                if (existingProduct == null)
+                {
+                    return Result.Fail<Product>($"Product with id {id} not found on database.");
+                }
+
+                existingProduct.Name = request.Name;
+                existingProduct.Description = request.Description;
+                existingProduct.Price = request.Price;
+                existingProduct.Stock = request.Stock;
+
+                var validationResult = _validator.Validate(existingProduct);
+
+                if (!validationResult.IsValid)
+                {
+                    var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
+                    return Result.Fail<Product>(errors);
+                }
+
+                _repository.Update(id, existingProduct);
+                return Result.Success(existingProduct);
             }
-
-            existingProduct.Name = request.Name;
-            existingProduct.Description = request.Description;
-            existingProduct.Price = request.Price;
-            existingProduct.Stock = request.Stock;
-
-            var validationResult = _validator.Validate(existingProduct);
-
-            if (!validationResult.IsValid)
+            catch (Exception ex)
             {
-                var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
-                return Result.Fail<Product>(errors);
+                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
             }
-
-            _repository.Update(id, existingProduct);
-            return Result.Success(existingProduct);
         }
 
         public Result DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            if (id <= 0)
+            {
+                return Result.Fail($"Invalid product id {id}");
+            }
+
+            try
+            {
+                _repository.Delete(id);
+                return Result.Success();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return Result.Fail(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while deleting the product: {ex.Message}");
+            }
         }
     }
 }
