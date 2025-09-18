@@ -1,8 +1,12 @@
 ﻿using AutoMapper;
+using MSProduct.API.Dtos;
+using MSProduct.Application.Dtos;
 
-namespace MSProduct.API.Mappings
+public class ProductProfile : Profile
 {
-    public class ProductMappingProfile : Profile
+    public ProductProfile()
     {
+        CreateMap<CreateProductRequest, CreateProductDto>();
+        CreateMap<UpdateProductRequest, UpdateProductDto>();
     }
 }

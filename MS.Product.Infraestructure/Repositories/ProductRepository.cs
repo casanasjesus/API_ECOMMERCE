@@ -22,7 +22,6 @@ namespace MSProduct.Infrastructure.Repositories
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
             var results = await _context.Products.ToListAsync();
-
             return results;
         }
 
@@ -32,11 +31,9 @@ namespace MSProduct.Infrastructure.Repositories
             return product;
         }
 
-        public int Add(Product order)
+        public int Add(Product product)
         {
-            // Adds a new product to the database
-            _context.Products.Add(order);
-
+            _context.Products.Add(product);
             var result = _context.SaveChanges();
 
             return result;
