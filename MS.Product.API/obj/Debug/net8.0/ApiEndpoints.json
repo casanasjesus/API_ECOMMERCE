@@ -59,7 +59,7 @@
   },
   {
     "ContainingType": "MSProduct.API.Controllers.ProductController",
-    "Method": "UpdateProduct",
+    "Method": "UpdateProductAsync",
     "RelativePath": "api/Product/update-product/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -71,8 +71,8 @@
         "IsRequired": true
       },
       {
-        "Name": "productDto",
-        "Type": "System.Object",
+        "Name": "request",
+        "Type": "MSProduct.API.Dtos.UpdateProductRequest",
         "IsRequired": true
       }
     ],

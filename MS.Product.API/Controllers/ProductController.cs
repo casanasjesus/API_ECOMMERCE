@@ -76,10 +76,27 @@ namespace MSProduct.API.Controllers
         }
 
         [HttpPut("update-product/{id}")]
-        public IActionResult UpdateProduct(int id, [FromBody] object productDto)
+        public IActionResult UpdateProductAsync(int id, [FromBody] UpdateProductRequest request)
         {
-            // Placeholder for actual implementation
-            return NoContent();
+            if (request == null)
+            {
+                return BadRequest("Request body is null.");
+            }
+
+            if (id <= 0)
+            {
+                return BadRequest("Invalid product ID.");
+            }
+
+            var productDto = _mapper.Map<UpdateProductDto>(request);
+            var result = _productService.UpdateProduct(id, productDto);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+
+            return Ok(result.Value);
         }
 
         [HttpDelete("delete-product/{id}")]

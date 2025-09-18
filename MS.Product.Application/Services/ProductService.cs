@@ -71,7 +71,28 @@ namespace MSProduct.Application.Services
 
         public Result<Product> UpdateProduct(int id, UpdateProductDto request)
         {
-            throw new NotImplementedException();
+            var existingProduct = _repository.GetByIdAsync(id).Result;
+
+            if (existingProduct == null)
+            {
+                return Result.Fail<Product>($"Product with id {id} not found on database.");
+            }
+
+            existingProduct.Name = request.Name;
+            existingProduct.Description = request.Description;
+            existingProduct.Price = request.Price;
+            existingProduct.Stock = request.Stock;
+
+            var validationResult = _validator.Validate(existingProduct);
+
+            if (!validationResult.IsValid)
+            {
+                var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
+                return Result.Fail<Product>(errors);
+            }
+
+            _repository.Update(id, existingProduct);
+            return Result.Success(existingProduct);
         }
 
         public Result DeleteProduct(int id)

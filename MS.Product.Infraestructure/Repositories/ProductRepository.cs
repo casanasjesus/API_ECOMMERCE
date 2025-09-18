@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MSProduct.Application.Repositories;
 using MSProduct.Domain;
 using MSProduct.Infrastructure.Data;
@@ -28,6 +23,12 @@ namespace MSProduct.Infrastructure.Repositories
         public async Task<Product> GetByIdAsync(int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(product => product.Id == id);
+
+            if (product == null)
+            {
+                throw new KeyNotFoundException($"Product with id {id} not found on database.");
+            }
+
             return product;
         }
 
@@ -35,18 +36,38 @@ namespace MSProduct.Infrastructure.Repositories
         {
             _context.Products.Add(product);
             var result = _context.SaveChanges();
-
             return result;
+        }
+
+        public void Update(int id, Product updatedProduct)
+        {
+            var product = _context.Products.FirstOrDefault(product => product.Id == id);
+
+            if (product == null)
+            {
+                throw new KeyNotFoundException($"Product with id {id} not found on database.");
+            }
+
+            product.Name = updatedProduct.Name;
+            product.Description = updatedProduct.Description;
+            product.Price = updatedProduct.Price;
+            product.Stock = updatedProduct.Stock;
+
+            _context.Products.Update(product);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
-        }
+            var product = _context.Products.FirstOrDefault(product => product.Id == id);
 
-        public void Update(int id, Product order)
-        {
-            throw new NotImplementedException();
+            if (product == null)
+            {
+                throw new KeyNotFoundException($"Product with id {id} not found on database.");
+            }
+
+            _context.Products.Remove(product);
+            _context.SaveChanges();
         }
     }
 }
