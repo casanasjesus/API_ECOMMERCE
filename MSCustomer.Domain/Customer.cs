@@ -10,10 +10,10 @@ namespace MSCustomer.Domain
         public string Name { get; set; }
 
         [StringLength(20)]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
 
         [StringLength(100)]
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         [StringLength(100)]
         public string? Address { get; set; }

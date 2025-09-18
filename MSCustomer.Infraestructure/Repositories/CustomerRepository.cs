@@ -34,22 +34,42 @@ namespace MSCustomer.Infrastructure.Repositories
 
         public int Add(Customer customer)
         {
-            // Adds a new product to the database
             _context.Customers.Add(customer);
-
             var result = _context.SaveChanges();
 
             return result;
         }
 
-        public void Delete(int id)
+        public void Update(int id, Customer updatedCustomer)
         {
-            throw new NotImplementedException();
+            var customer = _context.Customers.FirstOrDefault(customer => customer.Id == id);
+
+            if (customer == null)
+            {
+                throw new KeyNotFoundException($"Customer with id {id} not found on database.");
+            }
+
+            customer.Name = updatedCustomer.Name;
+            customer.LastName = updatedCustomer.LastName;
+            customer.Email = updatedCustomer.Email;
+            customer.Address = updatedCustomer.Address;
+            customer.DateRegister = updatedCustomer.DateRegister;
+
+            _context.Customers.Update(customer);
+            _context.SaveChanges();
         }
 
-        public void Update(int id, Customer customer)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var customer = _context.Customers.FirstOrDefault(customer => customer.Id == id);
+
+            if (customer == null)
+            {
+                throw new KeyNotFoundException($"Customer with id {id} not found on database.");
+            }
+
+            _context.Customers.Remove(customer);
+            _context.SaveChanges();
         }
     }
 }

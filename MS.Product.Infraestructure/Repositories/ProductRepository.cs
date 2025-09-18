@@ -36,6 +36,7 @@ namespace MSProduct.Infrastructure.Repositories
         {
             _context.Products.Add(product);
             var result = _context.SaveChanges();
+
             return result;
         }
 
