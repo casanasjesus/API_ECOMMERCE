@@ -2,7 +2,7 @@
   {
     "ContainingType": "MSCustomer.API.Controllers.CustomerController",
     "Method": "CreateCustomer",
-    "RelativePath": "api/Customer",
+    "RelativePath": "api/Customer/create-customer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -17,8 +17,34 @@
   },
   {
     "ContainingType": "MSCustomer.API.Controllers.CustomerController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Customer/customers-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSCustomer.API.Controllers.CustomerController",
+    "Method": "DeleteCustomer",
+    "RelativePath": "api/Customer/delete-customer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSCustomer.API.Controllers.CustomerController",
     "Method": "GetCustomerById",
-    "RelativePath": "api/Customer/{id}",
+    "RelativePath": "api/Customer/find-customer/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -33,8 +59,8 @@
   },
   {
     "ContainingType": "MSCustomer.API.Controllers.CustomerController",
-    "Method": "UpdateCustomer",
-    "RelativePath": "api/Customer/{id}",
+    "Method": "UpdateCustomerAsync",
+    "RelativePath": "api/Customer/update-customer/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -45,24 +71,8 @@
         "IsRequired": true
       },
       {
-        "Name": "customerDto",
-        "Type": "System.Object",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MSCustomer.API.Controllers.CustomerController",
-    "Method": "DeleteCustomer",
-    "RelativePath": "api/Customer/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "MSCustomer.API.Dtos.UpdateCustomerRequest",
         "IsRequired": true
       }
     ],

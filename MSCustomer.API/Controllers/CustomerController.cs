@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MSCustomer.API.Dtos;
 using MSCustomer.Application.Dtos;
@@ -20,16 +19,10 @@ namespace MSCustomer.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetCustomerById(int id)
+        [HttpGet("customers-list")]
+        public async Task<IActionResult> GetProducts()
         {
-            if (id <= 0)
-            {
-                return BadRequest("Invalid customer ID.");
-            }
-
-            // Get product by id using _productService
-            var result = await _customerService.GetCustomerByIdAsync(id);
+            var result = await _customerService.GetAllCustomersAsync();
 
             if (!result.IsSuccess)
             {
@@ -39,7 +32,25 @@ namespace MSCustomer.API.Controllers
             return Ok(result.Value);
         }
 
-        [HttpPost]
+        [HttpGet("find-customer/{id}")]
+        public async Task<IActionResult> GetCustomerById(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest("Invalid customer ID.");
+            }
+
+            var result = await _customerService.GetCustomerByIdAsync(id);
+
+            if (!result.IsSuccess)
+            {
+                throw new KeyNotFoundException($"Customer with id {id} not found on database.");
+            }
+
+            return Ok(result.Value);
+        }
+
+        [HttpPost("create-customer")]
         public IActionResult CreateCustomer([FromBody] CreateCustomerRequest request)
         {
             if (request == null)
@@ -47,7 +58,6 @@ namespace MSCustomer.API.Controllers
                 return BadRequest("Request body is null.");
             }
 
-            // Create product using _productService
             var customerDto = _mapper.Map<CreateCustomerDto>(request);
 
             var result = _customerService.CreateCustomer(customerDto);
@@ -60,17 +70,44 @@ namespace MSCustomer.API.Controllers
             return CreatedAtAction(nameof(GetCustomerById), new { id = result.Value.Id }, request);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateCustomer(int id, [FromBody] object customerDto)
+        [HttpPut("update-customer/{id}")]
+        public IActionResult UpdateCustomerAsync(int id, [FromBody] UpdateCustomerRequest request)
         {
-            // Placeholder for actual implementation
-            return NoContent();
+            if (request == null)
+            {
+                return BadRequest("Request body is null.");
+            }
+
+            if (id <= 0)
+            {
+                return BadRequest("Invalid customer ID.");
+            }
+
+            var customerDto = _mapper.Map<UpdateCustomerDto>(request);
+            var result = _customerService.UpdateCustomer(id, customerDto);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+
+            return Ok(result.Value);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete-customer/{id}")]
         public IActionResult DeleteCustomer(int id)
         {
-            // Placeholder for actual implementation
+            var result = _customerService.DeleteCustomer(id);
+
+            if (!result.IsSuccess)
+            {
+                if (result.Error.Contains("not found", StringComparison.OrdinalIgnoreCase))
+                {
+                    return NotFound(result.Error);
+                }
+                return BadRequest(result.Error);
+            }
+
             return NoContent();
         }
     }

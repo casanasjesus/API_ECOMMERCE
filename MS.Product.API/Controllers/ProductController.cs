@@ -13,9 +13,7 @@ namespace MSProduct.API.Controllers
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
 
-        public ProductController(
-            IProductService productService, 
-            IMapper mapper)
+        public ProductController(IProductService productService, IMapper mapper)
         {
             _productService = productService;
             _mapper = mapper;
