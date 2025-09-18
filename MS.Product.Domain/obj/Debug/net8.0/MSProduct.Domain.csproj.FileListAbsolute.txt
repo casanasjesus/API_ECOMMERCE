@@ -9,3 +9,15 @@ C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MS.Product.Domain\obj\De
 C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\refint\MSProduct.Domain.dll
 C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.pdb
 C:\Users\Jesús Casañas\Downloads\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\ref\MSProduct.Domain.dll
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\bin\Debug\net8.0\MSProduct.Domain.deps.json
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\bin\Debug\net8.0\MSProduct.Domain.dll
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\bin\Debug\net8.0\MSProduct.Domain.pdb
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.AssemblyInfoInputs.cache
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.AssemblyInfo.cs
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.sourcelink.json
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.dll
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\refint\MSProduct.Domain.dll
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\MSProduct.Domain.pdb
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MS.Product.Domain\obj\Debug\net8.0\ref\MSProduct.Domain.dll

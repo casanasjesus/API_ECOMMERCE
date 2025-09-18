@@ -21,6 +21,18 @@ namespace MSProduct.Application.Services
             _validator = validator;
         }
 
+        public async Task<Result<IEnumerable<Product>>> GetAllProductsAsync()
+        {
+            var products = await _repository.GetAllAsync();
+
+            if (products == null)
+            {
+                return Result.Fail<IEnumerable<Product>>("Products not found");
+            }
+
+            return Result.Success(products);
+        }
+
         public async Task<Result<Product>> GetProductByIdAsync(int id)
         {
             var product = await _repository.GetByIdAsync(id);
@@ -31,11 +43,6 @@ namespace MSProduct.Application.Services
             }
 
             return Result.Success(product);
-        }
-
-        public Task<Result<IEnumerable<Product>>> GetAllProductsAsync()
-        {
-            throw new NotImplementedException();
         }
 
         public Result<Product> CreateProduct(CreateProductDto request)

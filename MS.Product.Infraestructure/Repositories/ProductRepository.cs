@@ -26,9 +26,10 @@ namespace MSProduct.Infrastructure.Repositories
             return results;
         }
 
-        public Task<Product> GetByIdAsync(int id)
+        public async Task<Product> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FirstOrDefaultAsync(product => product.Id == id);
+            return product;
         }
 
         public int Add(Product order)

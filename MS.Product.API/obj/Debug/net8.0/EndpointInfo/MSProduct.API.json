@@ -5,7 +5,19 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Product/{id}": {
+    "/api/Product/products-list": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/find-product/{id}": {
       "get": {
         "tags": [
           "Product"
@@ -26,7 +38,40 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Product/create-product": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProductRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProductRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProductRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/update-product/{id}": {
       "put": {
         "tags": [
           "Product"
@@ -60,7 +105,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Product/delete-product/{id}": {
       "delete": {
         "tags": [
           "Product"
@@ -76,37 +123,6 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Product": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateProductRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateProductRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateProductRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"

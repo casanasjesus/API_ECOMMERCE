@@ -2,7 +2,7 @@
   {
     "ContainingType": "MSProduct.API.Controllers.ProductController",
     "Method": "CreateProduct",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Product/create-product",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -17,8 +17,24 @@
   },
   {
     "ContainingType": "MSProduct.API.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Product/delete-product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSProduct.API.Controllers.ProductController",
     "Method": "GetProductById",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/Product/find-product/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -33,8 +49,18 @@
   },
   {
     "ContainingType": "MSProduct.API.Controllers.ProductController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Product/products-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSProduct.API.Controllers.ProductController",
     "Method": "UpdateProduct",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/Product/update-product/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -47,22 +73,6 @@
       {
         "Name": "productDto",
         "Type": "System.Object",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MSProduct.API.Controllers.ProductController",
-    "Method": "DeleteProduct",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

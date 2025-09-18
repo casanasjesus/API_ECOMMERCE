@@ -21,8 +21,21 @@ namespace MSProduct.API.Controllers
             _productService = productService;
             _mapper = mapper;
         }
+
+        [HttpGet("products-list")]
+        public async Task<IActionResult> GetProducts()
+        {
+            var result = await _productService.GetAllProductsAsync();
+
+            if (!result.IsSuccess)
+            {
+                return NotFound();
+            }
+
+            return Ok(result.Value);
+        }
         
-        [HttpGet("{id}")]
+        [HttpGet("find-product/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             if (id <= 0)
@@ -41,7 +54,7 @@ namespace MSProduct.API.Controllers
             return Ok(result.Value);
         }
 
-        [HttpPost]
+        [HttpPost("create-product")]
         public IActionResult CreateProduct([FromBody] CreateProductRequest request)
         {
             if (request == null)
@@ -62,14 +75,14 @@ namespace MSProduct.API.Controllers
             return CreatedAtAction(nameof(GetProductById), new { id = result.Value.Id }, request);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update-product/{id}")]
         public IActionResult UpdateProduct(int id, [FromBody] object productDto)
         {
             // Placeholder for actual implementation
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete-product/{id}")]
         public IActionResult DeleteProduct(int id)
         {
             // Placeholder for actual implementation
