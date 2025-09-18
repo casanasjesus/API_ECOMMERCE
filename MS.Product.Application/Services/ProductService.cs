@@ -50,7 +50,7 @@ namespace MSProduct.Application.Services
             }
             catch (Exception ex)
             {
-                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
+                return Result.Fail<Product>($"An error occurred while retrieving the product: {ex.Message}");
             }
         }
 
@@ -81,7 +81,7 @@ namespace MSProduct.Application.Services
             }
             catch (Exception ex)
             {
-                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
+                return Result.Fail<Product>($"An error occurred while creating the product: {ex.Message}");
             }
         }
 
@@ -114,7 +114,7 @@ namespace MSProduct.Application.Services
             }
             catch (Exception ex)
             {
-                return Result.Fail<Product>($"An error occurred while retrieving products: {ex.Message}");
+                return Result.Fail<Product>($"An error occurred while updating the product: {ex.Message}");
             }
         }
 
