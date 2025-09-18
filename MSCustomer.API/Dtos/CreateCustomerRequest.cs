@@ -1,4 +1,4 @@
 ﻿namespace MSCustomer.API.Dtos
 {
-    public record CreateCustomerRequest(string Name, string LastName);
+    public record CreateCustomerRequest(string Name, string LastName, string Email, string? Address, DateTime DateRegister);
 }

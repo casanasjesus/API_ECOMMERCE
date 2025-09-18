@@ -1,8 +1,12 @@
 ﻿using AutoMapper;
+using MSCustomer.API.Dtos;
+using MSCustomer.Application.Dtos;
 
-namespace MSCustomer.API.Mappings
+public class CustomerProfile : Profile
 {
-    public class CustomerMappingProfile : Profile
+    public CustomerProfile()
     {
+        CreateMap<CreateCustomerRequest, CreateCustomerDto>();
+        CreateMap<UpdateCustomerRequest, UpdateCustomerDto>();
     }
 }

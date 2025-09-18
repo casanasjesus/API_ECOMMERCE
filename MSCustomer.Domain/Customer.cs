@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MSCustomer.Domain
 {
@@ -20,6 +14,9 @@ namespace MSCustomer.Domain
 
         [StringLength(100)]
         public string? Email { get; set; }
+
+        [StringLength(100)]
+        public string? Address { get; set; }
 
         public DateTime DateRegister { get; set; } = DateTime.UtcNow;
     }

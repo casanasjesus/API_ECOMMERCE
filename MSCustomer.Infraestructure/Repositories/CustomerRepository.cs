@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MSCustomer.Application.Repositories;
 using MSCustomer.Domain;
 using MSCustomer.Infrastructure.Data;
@@ -22,13 +17,19 @@ namespace MSCustomer.Infrastructure.Repositories
         public async Task<IEnumerable<Customer>> GetAllAsync()
         {
             var results = await _context.Customers.ToListAsync();
-
             return results;
         }
 
-        public Task<Customer> GetByIdAsync(int id)
+        public async Task<Customer> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var customer = await _context.Customers.FirstOrDefaultAsync(customer => customer.Id == id);
+
+            if (customer == null)
+            {
+                throw new KeyNotFoundException($"Customer with id {id} not found on database.");
+            }
+
+            return customer;
         }
 
         public int Add(Customer customer)

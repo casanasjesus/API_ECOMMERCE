@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MSCustomer.Application.Dtos;
+﻿using MSCustomer.Application.Dtos;
 using MSCustomer.Application.Repositories;
 using MSCustomer.Application.Validators;
 using MSCustomer.Domain;
