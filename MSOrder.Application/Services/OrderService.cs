@@ -93,7 +93,12 @@ namespace MSOrder.Application.Services
                 {
                     throw new Exception($"Product with id {item.ProductId} not found on database.");
                 }
-                    
+
+                if (item.Amount > product.Stock)
+                {
+                    throw new Exception($"Not enough stock for product {product.Name}. Requested: {item.Amount}, Available: {product.Stock}");
+                }
+
                 var orderItem = new OrderItem
                 {
                     ProductId = product.Id,
@@ -104,6 +109,15 @@ namespace MSOrder.Application.Services
                 };
 
                 order.AddOrderItem(orderItem);
+
+                product.Stock -= item.Amount;
+
+                var stockUpdated = await _productService.UpdateProductStockAsync(product.Id, product.Stock);
+
+                if (!stockUpdated)
+                {
+                    throw new Exception($"Failed to update stock for product {product.Name}");
+                }
             }
 
             var result = await _repository.Add(order);

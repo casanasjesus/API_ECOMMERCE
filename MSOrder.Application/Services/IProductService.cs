@@ -5,5 +5,6 @@ namespace MSOrder.Application.Services
     public interface IProductService
     {
         Task<ProductDto> GetProductById(int productId);
+        Task<bool> UpdateProductStockAsync(int productId, int newStock);
     }
 }
