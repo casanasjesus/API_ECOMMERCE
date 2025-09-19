@@ -1,9 +1,11 @@
-﻿using MSOrder.Domain;
+﻿using MSOrder.Application.Dtos;
+using MSOrder.Domain;
 
 namespace MSOrder.Application.Services
 {
     public interface IOrderService
     {
-        Task<Order> CreateOrderAsync(Order order, int customerId, int productId);
+        Task<Order> CreateOrderAsync(CreateOrderDto request);
+        Task<List<Order>> GetOrdersAsync();
     }
 }

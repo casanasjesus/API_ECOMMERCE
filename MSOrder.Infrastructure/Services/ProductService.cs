@@ -11,7 +11,7 @@ namespace MSOrder.Infrastructure.Services
             HttpClient httpClient  = new HttpClient();
             httpClient.BaseAddress = new Uri("https://localhost:6001/");
 
-            var response = await httpClient.GetAsync($"/api/Product/find-product/{1}");
+            var response = await httpClient.GetAsync($"/api/Product/find-product/{productId}");
 
             if (!response.IsSuccessStatusCode)
             {

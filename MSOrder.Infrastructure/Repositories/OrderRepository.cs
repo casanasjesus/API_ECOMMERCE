@@ -1,18 +1,31 @@
-﻿using MSOrder.Application.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using MSOrder.Application.Repositories;
 using MSOrder.Domain;
+using MSOrder.Infrastructure.Data;
 
 namespace MSOrder.Infrastructure.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        public List<Order> GetOrders()
+        private readonly ApplicationDbContext _context;
+
+        public OrderRepository(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<Order> Add(Order order)
+        public async Task<List<Order>> GetOrders()
         {
-            throw new NotImplementedException();
+            return await _context.Orders
+                .Include(o => o.OrderItems)
+                .ToListAsync();
+        }
+
+        public async Task<Order> Add(Order order)
+        {
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+            return order;
         }
     }
 }

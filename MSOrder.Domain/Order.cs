@@ -18,8 +18,9 @@
 
         public void AddOrderItem(OrderItem orderItem)
         {
+            orderItem.SubTotal = orderItem.UnitPrice * orderItem.Amount;
             OrderItems.Add(orderItem);
-            TotalOrder += orderItem.UnitPrice * orderItem.Amount;
+            TotalOrder += orderItem.SubTotal;
         }
 
         public void RemoveOrderItem(OrderItem orderItem)

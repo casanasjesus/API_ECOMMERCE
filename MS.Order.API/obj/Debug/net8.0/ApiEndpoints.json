@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "ContainingType": "MSOrder.API.Controllers.OrderController",
+    "Method": "Post",
+    "RelativePath": "api/Order/create-order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MSOrder.API.Dtos.CreateOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSOrder.API.Controllers.OrderController",
+    "Method": "GetOrders",
+    "RelativePath": "api/Order/get-orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

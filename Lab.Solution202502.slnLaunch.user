@@ -14,7 +14,8 @@
       },
       {
         "Path": "MS.Order.API\\MSOrder.API.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "https"
       }
     ]
   }
