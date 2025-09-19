@@ -17,8 +17,15 @@ namespace MSOrder.Infrastructure.Repositories
         public async Task<List<Order>> GetOrders()
         {
             return await _context.Orders
-                .Include(o => o.OrderItems)
+                .Include(order => order.OrderItems)
                 .ToListAsync();
+        }
+
+        public async Task<Order> GetOrderById(int orderId)
+        {
+            return await _context.Orders
+                .Include(order => order.OrderItems)
+                .FirstOrDefaultAsync(order => order.OrderId == orderId);
         }
 
         public async Task<Order> Add(Order order)

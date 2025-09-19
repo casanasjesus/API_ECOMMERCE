@@ -22,6 +22,38 @@ namespace MSOrder.Application.Services
             _customerService = customerService;
         }
 
+        public async Task<List<Order>> GetOrdersAsync()
+        {
+            try
+            {
+                var orders = await _repository.GetOrders();
+                return orders ?? new List<Order>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while retrieving orders.", ex);
+            }
+        }
+
+        public async Task<Order> GetOrderByIdAsync(int orderId)
+        {
+            try
+            {
+                var order = await _repository.GetOrderById(orderId);
+
+                if (order == null)
+                {
+                    throw new Exception($"Order with id {orderId} not found on database.");
+                }
+                    
+                return order;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while retrieving the order.", ex);
+            }
+        }
+
         public async Task<Order> CreateOrderAsync(CreateOrderDto request)
         {
             var customerDto = await _customerService.GetCustomerById(request.customerId);
@@ -76,19 +108,6 @@ namespace MSOrder.Application.Services
 
             var result = await _repository.Add(order);
             return result;
-        }
-
-        public async Task<List<Order>> GetOrdersAsync()
-        {
-            try
-            {
-                var orders = await _repository.GetOrders();
-                return orders ?? new List<Order>();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while retrieving orders.", ex);
-            }
         }
     }
 }

@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "MSOrder.API.Controllers.OrderController",
+    "Method": "GetOrderById",
+    "RelativePath": "api/Order/get-order/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MSOrder.API.Controllers.OrderController",
     "Method": "GetOrders",
     "RelativePath": "api/Order/get-orders",
     "HttpMethod": "GET",

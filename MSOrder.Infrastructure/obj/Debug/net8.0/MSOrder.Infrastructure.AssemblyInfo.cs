@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MSOrder.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc90e777141de3de574827f2ec5ef1ac0f434b19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bb924698389e96d7e47faf04a060302f72a416f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MSOrder.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MSOrder.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

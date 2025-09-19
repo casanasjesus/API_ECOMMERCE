@@ -32,6 +32,26 @@ namespace MSOrder.API.Controllers
             return Ok(orders);
         }
 
+        [HttpGet("get-order/{id}")]
+        public async Task<IActionResult> GetOrderById(int id)
+        {
+            try
+            {
+                var order = await _orderService.GetOrderByIdAsync(id);
+
+                if (order == null)
+                {
+                    return NotFound($"Order with id {id} not found on database.");
+                }
+                    
+                return Ok(order);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("create-order")]
         public async Task<IActionResult> Post([FromBody] CreateOrderRequest request)
         {
