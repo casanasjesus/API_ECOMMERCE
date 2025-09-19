@@ -2,8 +2,11 @@
 {
     public class OrderItem
     {
-        public int Id { get; set; }
+        public int OrderItemId { get; set; }
         public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public decimal UnitPrice { get; set; }
         public int Amount { get; set; }
+        public decimal SubTotal { get; set; }
     }
 }

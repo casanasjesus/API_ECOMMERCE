@@ -2,36 +2,34 @@
 {
     public class Order
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime OrderDate { get; set; }
 
-        public decimal Total { get; set; }
+        public OrderStatus OrderStatus { get; set; }
+
+        public Address OrderAddress { get; set; }
+
+        public Customer Customer { get; set; }
 
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        public Address ShippingAddress { get; set; }
+        public decimal TotalOrder { get; set; }
 
-        public int CustomerId { get; set; }
-
-        public string CustomerName { get; set; }
-
-        public OrderStatus Status { get; set; }
-
-        public void AddOrderItem(OrderItem item)
+        public void AddOrderItem(OrderItem orderItem)
         {
-            OrderItems.Add(item);
-            //Total += item.UnitPrice * item.Quantity;
+            OrderItems.Add(orderItem);
+            TotalOrder += orderItem.UnitPrice * orderItem.Amount;
         }
 
-        public void RemoveOrderItem(OrderItem item)
+        public void RemoveOrderItem(OrderItem orderItem)
         {
-            var existingItem = OrderItems.FirstOrDefault(i => i.Id == item.Id);
+            var existingItem = OrderItems.FirstOrDefault(item => item.OrderItemId == orderItem.OrderItemId);
 
             if (existingItem != null)
             {
                 OrderItems.Remove(existingItem);
-                //Total -= item.UnitPrice * item.Quantity;
+                TotalOrder -= orderItem.UnitPrice * orderItem.Amount;
             }
         }
     }

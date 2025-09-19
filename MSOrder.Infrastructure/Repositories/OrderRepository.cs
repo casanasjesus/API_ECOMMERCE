@@ -9,5 +9,10 @@ namespace MSOrder.Infrastructure.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Task<Order> Add(Order order)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
