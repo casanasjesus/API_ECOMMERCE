@@ -21,7 +21,7 @@
         public void AddOrderItem(OrderItem item)
         {
             OrderItems.Add(item);
-            Total += item.UnitPrice * item.Quantity;
+            //Total += item.UnitPrice * item.Quantity;
         }
 
         public void RemoveOrderItem(OrderItem item)
@@ -31,7 +31,7 @@
             if (existingItem != null)
             {
                 OrderItems.Remove(existingItem);
-                Total -= item.UnitPrice * item.Quantity;
+                //Total -= item.UnitPrice * item.Quantity;
             }
         }
     }

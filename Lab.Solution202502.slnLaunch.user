@@ -8,14 +8,13 @@
         "DebugTarget": "https"
       },
       {
-        "Path": "MS.Order.API\\MSOrder.API.csproj",
+        "Path": "MSCustomer.API\\MSCustomer.API.csproj",
         "Action": "Start",
         "DebugTarget": "https"
       },
       {
-        "Path": "MSCustomer.API\\MSCustomer.API.csproj",
-        "Action": "Start",
-        "DebugTarget": "https"
+        "Path": "MS.Order.API\\MSOrder.API.csproj",
+        "Action": "Start"
       }
     ]
   }

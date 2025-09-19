@@ -33,3 +33,5 @@ C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laborator
 C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\refint\MSOrder.Infrastructure.dll
 C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.pdb
 C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\ref\MSOrder.Infrastructure.dll
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MSOrder.Infrastructure\bin\Debug\net8.0\MSOrder.Infrastructure.runtimeconfig.json
+C:\Users\Jesús Casañas\OneDrive\Desktop\Jesus_Enrique\ISTEA\materias\laboratorio_aplicaciones_web_servidor\Lab.Solution202502_1\MSOrder.Infrastructure\obj\Debug\net8.0\MSOrder.Infrastructure.genruntimeconfig.cache
