@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MSOrder.Application.Repositories;
 using MSOrder.Application.Services;
+using MSOrder.Application.Validators;
 using MSOrder.Infrastructure.Data;
 using MSOrder.Infrastructure.Repositories;
 using MSOrder.Infrastructure.Services;
@@ -16,6 +17,9 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+
+// Add this in your service configuration
+builder.Services.AddScoped<OrderValidator>();
 
 // Add AutoMapper configuration to the service container (scan the mapping profile's assembly)
 builder.Services.AddAutoMapper(cfg =>
