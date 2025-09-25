@@ -16,6 +16,11 @@
         "Path": "MS.Order.API\\MSOrder.API.csproj",
         "Action": "Start",
         "DebugTarget": "https"
+      },
+      {
+        "Path": "BlazorClientApp\\BlazorClientApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
       }
     ]
   }

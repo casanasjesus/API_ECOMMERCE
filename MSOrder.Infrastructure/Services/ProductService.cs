@@ -11,7 +11,7 @@ namespace MSOrder.Infrastructure.Services
         public ProductService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:6001/");
+            _httpClient.BaseAddress = new Uri("https://localhost:6001");
         }
 
         public async Task<ProductDto> GetProductById(int productId)

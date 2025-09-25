@@ -11,7 +11,7 @@ namespace MSOrder.Infrastructure.Services
         public CustomerService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7001/");
+            _httpClient.BaseAddress = new Uri("https://localhost:7001");
         }
 
         public async Task<CustomerDto> GetCustomerById(int customerId)
