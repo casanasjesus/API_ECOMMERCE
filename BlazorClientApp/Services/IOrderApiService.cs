@@ -4,6 +4,7 @@ namespace BlazorClientApp.Services
 {
     public interface IOrderApiService
     {
-        Task<HttpResponseMessage> SaveOrderAsync(OrderDto order);
+        Task<HttpResponseMessage> CreateOrder(OrderDto order);
+        Task<List<OrderListDto>> GetOrdersList();
     }
 }

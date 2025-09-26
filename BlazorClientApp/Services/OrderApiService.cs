@@ -11,10 +11,16 @@ namespace BlazorClientApp.Services
             _http = http ?? throw new ArgumentNullException(nameof(http));
         }
 
-        public async Task<HttpResponseMessage> SaveOrderAsync(OrderDto order)
+        public async Task<HttpResponseMessage> CreateOrder(OrderDto order)
         {
-            var response = await _http.PostAsJsonAsync("api/order", order);
+            var response = await _http.PostAsJsonAsync("api/Order/create-order", order);
             return response;
+        }
+
+        public async Task<List<OrderListDto>> GetOrdersList()
+        {
+            var result = await _http.GetFromJsonAsync<List<OrderListDto>>("api/Order/get-orders");
+            return result ?? new List<OrderListDto>();
         }
     }
 }

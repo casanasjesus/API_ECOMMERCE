@@ -1,0 +1,119 @@
+﻿@using BlazorClientApp.Dtos
+@using BlazorClientApp.Services
+
+@page "/create-order"
+@inject IOrderApiService OrderService
+
+<h3>Create Order</h3>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="mb-3">
+                <label for="customerId" class="form-label">Customer ID</label>
+                <input id="customerId" type="number" class="form-control" @bind="order.customerId" />
+            </div>
+
+            <h5>Order Items</h5>
+            <div class="card p-3 mb-3">
+                @foreach (var item in order.items)
+                {
+                    <div class="row mb-2 align-items-end">
+                        <div class="col">
+                            <label class="form-label">Product ID</label>
+                            <input type="number" class="form-control" @bind="item.ProductId" />
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Amount</label>
+                            <input type="number" class="form-control" @bind="item.Amount" />
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-danger"
+                                    @onclick="(() => RemoveItem(item))">
+                                X
+                            </button>
+                        </div>
+                    </div>
+                }
+
+                <button type="button" class="btn btn-secondary" @onclick="AddItem">
+                    + Add Item
+                </button>
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-select" @bind="order.status">
+                    @foreach (var s in Enum.GetValues<OrderStatusDto>())
+                    {
+                        <option value="@s">@s</option>
+                    }
+                </select>
+            </div>
+
+            <h5>Order Address</h5>
+            <div class="mb-3">
+                <label for="street" class="form-label">Street</label>
+                <input id="street" class="form-control" @bind="order.orderAddress.Street" />
+            </div>
+
+            <div class="mb-3">
+                <label for="number" class="form-label">Number</label>
+                <input id="number" type="number" class="form-control" @bind="order.orderAddress.Number" />
+            </div>
+
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input id="city" class="form-control" @bind="order.orderAddress.City" />
+            </div>
+
+            <button type="button" class="btn btn-primary" @onclick="HandleSubmit">
+                Create Order
+            </button>
+
+            @if (!string.IsNullOrEmpty(message))
+            {
+                <div class="alert alert-info mt-3">@message</div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private OrderDto order = new OrderDto();
+    private string message = "";
+
+    private void AddItem()
+    {
+        order.items.Add(new OrderItemDto());
+    }
+
+    private void RemoveItem(OrderItemDto item)
+    {
+        order.items.Remove(item);
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            var response = await OrderService.CreateOrder(order);
+
+            if (response.IsSuccessStatusCode)
+            {
+                message = "Order created successfully!";
+                order = new OrderDto();
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                message = $"Error {response.StatusCode}: {error}";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Exception: {ex.Message}";
+        }
+    }
+}

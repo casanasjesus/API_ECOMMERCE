@@ -8,7 +8,7 @@ namespace BlazorClientApp.Services
 
         public CustomerApiService(HttpClient http)
         {
-            _http = http;
+            _http = http ?? throw new ArgumentNullException(nameof(http));
         }
 
         public async Task<HttpResponseMessage> CreateCustomer(CreateCustomerDto customer)
