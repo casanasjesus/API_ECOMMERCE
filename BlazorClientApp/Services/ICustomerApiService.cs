@@ -4,6 +4,7 @@ namespace BlazorClientApp.Services
 {
     public interface ICustomerApiService
     {
-        Task<HttpResponseMessage> CreateCustomer(CreateCustomerRequest customer);
+        Task<HttpResponseMessage> CreateCustomer(CreateCustomerDto customer);
+        Task<List<CustomerDto>> GetCustomersList();
     }
 }

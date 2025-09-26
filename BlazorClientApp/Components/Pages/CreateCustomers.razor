@@ -49,7 +49,7 @@
 </div>
 
 @code {
-    private CreateCustomerRequest customer = new CreateCustomerRequest
+    private CreateCustomerDto customer = new CreateCustomerDto
     {
         DateRegister = DateTime.Now
     };
@@ -65,7 +65,7 @@
             if (response.IsSuccessStatusCode)
             {
                 message = "Customer created successfully!";
-                customer = new CreateCustomerRequest { DateRegister = DateTime.Now };
+                customer = new CreateCustomerDto { DateRegister = DateTime.Now };
             }
             else
             {
