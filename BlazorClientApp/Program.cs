@@ -3,17 +3,19 @@ using BlazorClientApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container for interactive server components.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register an HTTP client for the Orders API.
-// The base address is read from configuration key "ApiBaseUrl" if present,
-// otherwise it falls back to "https://localhost:5001/" (adjust to your API URL).
 builder.Services.AddHttpClient<IOrderApiService, OrderApiService>(client =>
 {
     var apiBase = builder.Configuration["ApiBaseUrl"];
     client.BaseAddress = new Uri(!string.IsNullOrWhiteSpace(apiBase) ? apiBase : "https://localhost:5001/");
+});
+
+builder.Services.AddHttpClient<IProductApiService, ProductApiService>(client =>
+{
+    var apiBase = builder.Configuration["ApiBaseUrl"];
+    client.BaseAddress = new Uri(!string.IsNullOrWhiteSpace(apiBase) ? apiBase : "https://localhost:6001/");
 });
 
 builder.Services.AddHttpClient<ICustomerApiService, CustomerApiService>(client =>
@@ -24,7 +26,6 @@ builder.Services.AddHttpClient<ICustomerApiService, CustomerApiService>(client =
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
