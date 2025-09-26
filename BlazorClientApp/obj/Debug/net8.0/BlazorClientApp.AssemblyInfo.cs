@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorClientApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b4a78f7229b7d3dfaa7864caa088916527e2878")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99a0a68dcaa5212e0a9a9d9687365e45578cc660")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorClientApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorClientApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

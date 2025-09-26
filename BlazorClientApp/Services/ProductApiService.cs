@@ -19,7 +19,7 @@ namespace BlazorClientApp.Services
 
         public async Task<List<ProductDto>> GetProductsList()
         {
-            var result = await _http.GetFromJsonAsync<List<ProductDto>>("api/Product/prodcuts-list");
+            var result = await _http.GetFromJsonAsync<List<ProductDto>>("api/Product/products-list");
             return result ?? new List<ProductDto>();
         }
     }
