@@ -6,5 +6,6 @@ namespace BlazorClientApp.Services
     {
         Task<HttpResponseMessage> CreateCustomer(CreateCustomerDto customer);
         Task<List<CustomerDto>> GetCustomersList();
+        Task<HttpResponseMessage> DeleteCustomer(int id);
     }
 }

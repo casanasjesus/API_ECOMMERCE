@@ -2,6 +2,7 @@
 
 @page "/customers"
 @inject BlazorClientApp.Services.ICustomerApiService CustomerService
+@inject IJSRuntime JS
 
 <h3>Customers</h3>
 
@@ -26,6 +27,7 @@ else
                 <th>Email</th>
                 <th>Dirección</th>
                 <th>Fecha Registro</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +40,11 @@ else
                     <td>@c.Email</td>
                     <td>@c.Address</td>
                     <td>@c.DateRegister.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteCustomer(c.Id)">
+                            Eliminar
+                        </button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -46,10 +53,30 @@ else
 
 @code {
     private List<CustomerDto>? customers;
+    private string message = "";
 
     protected override async Task OnInitializedAsync()
     {
         customers = await CustomerService.GetCustomersList();
+    }
+
+    private async Task DeleteCustomer(int id)
+    {
+        var confirmed = await JS.InvokeAsync<bool>("confirm", $"¿Seguro que deseas eliminar el cliente con ID {id}?");
+        if (!confirmed) return;
+
+        var response = await CustomerService.DeleteCustomer(id);
+
+        if (response.IsSuccessStatusCode)
+        {
+            message = "Cliente eliminado correctamente.";
+            customers = await CustomerService.GetCustomersList();
+        }
+        else
+        {
+            var error = await response.Content.ReadAsStringAsync();
+            message = $"Error {response.StatusCode}: {error}";
+        }
     }
 }
 

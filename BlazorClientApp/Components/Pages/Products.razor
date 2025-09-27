@@ -2,6 +2,7 @@
 
 @page "/products"
 @inject BlazorClientApp.Services.IProductApiService ProductService
+@inject IJSRuntime JS
 
 <h3>Products</h3>
 
@@ -25,6 +26,7 @@ else
                 <th>Descripción</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -36,6 +38,11 @@ else
                     <td>@p.Description</td>
                     <td>@p.Price.ToString("C")</td>
                     <td>@p.Stock</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteProduct(p.Id)">
+                            Eliminar
+                        </button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -44,9 +51,29 @@ else
 
 @code {
     private List<ProductDto>? products;
+    private string message = "";
 
     protected override async Task OnInitializedAsync()
     {
         products = await ProductService.GetProductsList();
+    }
+
+    private async Task DeleteProduct(int id)
+    {
+        var confirmed = await JS.InvokeAsync<bool>("confirm", $"¿Seguro que deseas eliminar el producto con ID {id}?");
+        if (!confirmed) return;
+
+        var response = await ProductService.DeleteProduct(id);
+
+        if (response.IsSuccessStatusCode)
+        {
+            message = "Producto eliminado correctamente.";
+            products = await ProductService.GetProductsList();
+        }
+        else
+        {
+            var error = await response.Content.ReadAsStringAsync();
+            message = $"Error {response.StatusCode}: {error}";
+        }
     }
 }

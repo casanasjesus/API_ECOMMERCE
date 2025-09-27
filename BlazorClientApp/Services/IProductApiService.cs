@@ -6,5 +6,6 @@ namespace BlazorClientApp.Services
     {
         Task<HttpResponseMessage> CreateProduct(CreateProductDto product);
         Task<List<ProductDto>> GetProductsList();
+        Task<HttpResponseMessage> DeleteProduct(int id);
     }
 }

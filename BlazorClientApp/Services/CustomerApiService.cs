@@ -22,5 +22,11 @@ namespace BlazorClientApp.Services
             var result = await _http.GetFromJsonAsync<List<CustomerDto>>("api/Customer/customers-list");
             return result ?? new List<CustomerDto>();
         }
+
+        public async Task<HttpResponseMessage> DeleteCustomer(int id)
+        {
+            var response = await _http.DeleteAsync($"api/Customer/delete-customer/{id}");
+            return response;
+        }
     }
 }
