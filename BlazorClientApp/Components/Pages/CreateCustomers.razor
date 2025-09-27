@@ -36,8 +36,15 @@
                        @bind:format="yyyy-MM-dd" />
             </div>
 
-            <button type="button" class="btn btn-primary" @onclick="HandleSubmit">
-                Create Customer
+            <button type="button" class="btn btn-primary" @onclick="HandleSubmit" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Sending...</span>
+                }
+                else
+                {
+                    <span>Create Customer</span>
+                }
             </button>
 
             @if (!string.IsNullOrEmpty(message))
@@ -55,9 +62,13 @@
     };
 
     private string message = "";
+    private bool isLoading = false;
 
     public async Task HandleSubmit()
     {
+        isLoading = true;
+        message = "Sending request...";
+
         try
         {
             var response = await CustomerService.CreateCustomer(customer);
@@ -76,6 +87,10 @@
         catch (Exception ex)
         {
             message = $"Exception: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
 }

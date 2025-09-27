@@ -68,8 +68,15 @@
                 <input id="city" class="form-control" @bind="order.orderAddress.City" />
             </div>
 
-            <button type="button" class="btn btn-primary" @onclick="HandleSubmit">
-                Create Order
+            <button type="button" class="btn btn-primary" @onclick="HandleSubmit" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Sending...</span>
+                }
+                else
+                {
+                    <span>Create Order</span>
+                }
             </button>
 
             @if (!string.IsNullOrEmpty(message))
@@ -83,6 +90,7 @@
 @code {
     private OrderDto order = new OrderDto();
     private string message = "";
+    private bool isLoading = false;
 
     private void AddItem()
     {
@@ -96,6 +104,9 @@
 
     private async Task HandleSubmit()
     {
+        isLoading = true;
+        message = "Sending request...";
+
         try
         {
             var response = await OrderService.CreateOrder(order);
@@ -114,6 +125,10 @@
         catch (Exception ex)
         {
             message = $"Exception: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
 }

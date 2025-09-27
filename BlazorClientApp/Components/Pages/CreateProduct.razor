@@ -30,8 +30,15 @@
                 <input id="stock" type="number" class="form-control" @bind="product.Stock" />
             </div>
 
-            <button type="button" class="btn btn-primary" @onclick="HandleSubmit">
-                Create Product
+            <button type="button" class="btn btn-primary" @onclick="HandleSubmit" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Sending...</span>
+                }
+                else
+                {
+                    <span>Create Product</span>
+                }
             </button>
 
             @if (!string.IsNullOrEmpty(message))
@@ -45,9 +52,13 @@
 @code {
     private CreateProductDto product = new CreateProductDto();
     private string message = "";
+    private bool isLoading = false;
 
     private async Task HandleSubmit()
     {
+        isLoading = true;
+        message = "Sending request...";
+
         try
         {
             var response = await ProductService.CreateProduct(product);
@@ -66,6 +77,10 @@
         catch (Exception ex)
         {
             message = $"Exception: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
 }
